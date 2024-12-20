@@ -1,0 +1,44 @@
+---
+title: "MyMap"
+author: "Mohammed Teslim"
+date: "`r format(Sys.Date(), '%B %d, %Y')`"
+output: html_document
+---
+<style>
+body {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  margin: 2em; 
+  background-color: #002b36; /* Solarized Dark background color */
+  color: #839496; /* Solarized Dark base0 color for text */
+}
+h1, h2 {
+  font-weight: bold;
+  color: #268bd2; /* Solarized Dark blue color for headers */
+  text-align: center;
+}
+.leaflet-container {
+  height: 500px; 
+  border: 1px solid #586e75; /* Solarized Dark base01 color for border */
+  box-shadow: 3px 3px 5px #073642; /* Solarized Dark base02 color for shadow */
+}
+.metadata {
+  text-align: center; /* Center the author and date */
+}
+</style>
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(leaflet)
+```
+
+## My Leaflet Map
+
+```{r map, echo=FALSE, warning=FALSE, message=FALSE, out.extra='id="map"'}
+m <- leaflet() %>%
+  addTiles() %>%  # Add default OpenStreetMap map tiles
+  setView(lng = -73.9961, lat = 40.7322, zoom = 17) %>% 
+  addMarkers(lng = -73.9961, lat = 40.7322, popup = "NYU Center for Data Science") # Add a marker with a popup  # Set the view to London
+
+m
+```
