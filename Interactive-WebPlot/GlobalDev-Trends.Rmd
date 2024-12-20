@@ -1,0 +1,90 @@
+---
+title: "Exploring Global Development Trends with Gapminder"
+author: "Teslim Mohammed"
+date: "`r format(Sys.time(), '%Y-%m-%d')`"
+output:
+  ioslides_presentation:
+    widescreen: TRUE
+    smaller: TRUE
+    css: custom.css
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
+
+# Load necessary libraries
+library(gapminder)
+library(plotly)
+library(dplyr)
+```
+
+## Slide 1: Introduction
+
+**Unveiling Global Development Patterns**
+
+-   We're embarking on a journey to explore the **Gapminder dataset**, a treasure trove of information about global development.
+-   Our tools: **R** and the interactive power of **Plotly**.
+-   Our mission: To visualize and understand the dynamic relationships between:
+    -   **Life Expectancy**
+    -   **GDP per Capita**
+    -   **Population**
+    
+We will analyze how these vital indicators have changed across the globe and over several decades.
+
+## Slide 2: The Interactive Plot
+
+```{r Slide 2, fig.height=8, fig.width=11}
+# Data Preparation
+data("gapminder")
+gapminder_subset <- gapminder %>%
+  filter(year %in% c(1952, 1962, 1972, 1982, 1992, 2002, 2007))
+
+# Create the Plotly bubble chart
+p <- gapminder_subset %>%
+  plot_ly(
+    x = ~gdpPercap,
+    y = ~lifeExp,
+    size = ~pop,
+    color = ~continent,
+    frame = ~year, 
+    text = ~country,
+    hoverinfo = "text",
+    type = "scatter",
+    mode = "markers",
+    marker = list(sizemode = "diameter")
+  ) %>%
+  layout(
+    title = "Life Expectancy vs. GDP per Capita (1952-2007)",
+    xaxis = list(title = "GDP per Capita", type = "log"),
+    yaxis = list(title = "Life Expectancy"),
+    margin = list(t = 100) # Increase top margin to move title up
+  ) %>%
+  animation_opts(
+    frame = 1000,
+    transition = 500,
+    easing = "linear"
+  )
+p
+```
+
+## Slide 3: Conclusion
+
+**Key Insights**
+
+-   **Positive Trend:** A clear positive correlation exists between GDP per capita and life expectancy. Wealthier nations generally enjoy longer lives.
+-   **Continental Divides:** The visualization highlights disparities in development levels across continents.
+-   **Global Progress:** The animation demonstrates that most countries have made substantial progress over time, improving both life expectancy and GDP.
+-   There are a few outliers that do not follow the trend.
+
+------------------------------------------------------------------------
+
+**Looking Ahead**
+
+This interactive exploration is just the beginning. We can delve deeper by:
+
+-   Adding interactive controls.
+-   Integrating more variables from the Gapminder dataset.
+-   Performing in-depth statistical analysis.
+-   Adding labels to the bubbles
+
+Plotly empowers us to transform data into compelling visual narratives, fostering a deeper understanding of our world.
