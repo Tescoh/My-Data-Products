@@ -1,0 +1,10 @@
+name: machinelearning_app
+title:
+username: ml73o6-mohammed-teslim
+account: ml73o6-mohammed-teslim
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 13629705
+bundleId: 9552871
+url: https://ml73o6-mohammed-teslim.shinyapps.io/machinelearning_app/
+version: 1
