@@ -1,0 +1,84 @@
+---
+title: "Interactive Model Building App Documentation"
+output: html_document
+---
+
+## Introduction
+
+This Shiny app allows you to interactively build and evaluate linear regression and decision tree models on selected datasets. This document provides instructions on how to use the app.
+
+## Datasets
+
+The app offers the following built-in datasets for model building:
+
+*   **mtcars:** Motor Trend Car Road Tests (for linear regression)
+*   **iris:** Iris Flower Dataset (for classification)
+*   **Boston:** Boston Housing Dataset (for linear regression)
+
+## Input Controls
+
+The sidebar panel contains the following input controls:
+
+*   **Select Dataset:** Choose the dataset you want to use for model building.
+*   **Select Dependent Variable:** Select the outcome variable you want to predict. This dropdown updates based on the selected dataset.
+*   **Select Independent Variables:** Select the predictor variables to include in the model. This list updates based on the selected dataset and dependent variable.
+*   **Select Model Type:** Choose between "Linear Regression" and "Decision Tree".
+*   **Train/Test Split (% Train):** Use the slider to determine the percentage of data to be used for training the model. The remaining data will be used for testing.
+
+## Model Building Tab
+
+This tab displays the results of the model building process.
+
+### Model Summary
+
+This section shows a summary of the fitted model.
+
+*   **Linear Regression:** Includes coefficients, p-values, R-squared, and other relevant statistics.
+*   **Decision Tree:** Displays the tree structure.
+
+### Evaluation Metrics
+
+This section presents a table of evaluation metrics calculated on the test set.
+
+*   **Linear Regression:**
+    *   **RMSE (Root Mean Squared Error):** A measure of the average prediction error.
+    *   **R-squared:** Represents the proportion of variance in the dependent variable explained by the model.
+    *   **MAE (Mean Absolute Error):** Another measure of average prediction error.
+*   **Decision Tree:**
+    *   **Accuracy:** The proportion of correctly classified instances.
+    *   **Precision:** The proportion of true positives among the predicted positives.
+    *   **Recall:** The proportion of true positives among the actual positives.
+    *   **F1-score:** A balanced measure that considers both precision and recall.
+
+### Diagnostic Plots
+
+This section provides diagnostic plots to help you assess the model's assumptions and performance.
+
+*   **Linear Regression:**
+    *   **Residuals vs Fitted:** Checks for non-linearity and non-constant variance.
+    *   **Normal Q-Q:** Assesses whether the residuals are normally distributed.
+    *   **Scale-Location:** Checks for homoscedasticity (constant variance of residuals).
+    *   **Residuals vs Leverage:** Identifies influential data points.
+*   **Decision Tree:**
+    *   **Decision Tree Plot:** Visualizes the decision tree structure.
+    *   **Variable Importance:** Shows the relative importance of each predictor variable in the model.
+
+## How to Use the App
+
+1.  Select a dataset from the "Select Dataset" dropdown.
+2.  Choose the dependent variable from the "Select Dependent Variable" dropdown.
+3.  Select the independent variables using the checkboxes in "Select Independent Variables".
+4.  Choose the desired model type ("Linear Regression" or "Decision Tree") using the radio buttons.
+5.  Adjust the "Train/Test Split" slider to set the percentage of data for training.
+6.  The app will automatically train the model and display the results in the "Model Building" tab.
+7.  Examine the model summary, evaluation metrics, and diagnostic plots to assess the model's performance.
+8.  You can change the inputs and rebuild the model as many times as needed.
+
+## Cross Validation
+During the model selection and training process, 10 fold cross validation is used. This provides a more reliable estimate of how well the model is likely to generalize.
+
+## Notes
+
+*   The app handles missing values by omitting them (using `na.omit()`).
+*   The decision tree model uses the `rpart` package, and the tree is visualized using `rpart.plot`.
+*   The `caret` package is used for model training, cross-validation, and evaluation metrics calculations.

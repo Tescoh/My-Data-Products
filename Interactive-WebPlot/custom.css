@@ -1,0 +1,49 @@
+/* custom.css */
+/* Solarized Dark Theme Colors */
+body {
+  background-color: #002b36; /* Base03 */
+  color: #839496; /* Base0 */
+}
+
+/* Slide backgrounds */
+.slide-background {
+  background-color: #002b36; /* Base03 */
+}
+
+/* Title styles */
+h1 {
+  color: #268bd2; /* Blue */
+  text-align: center;
+  font-size: 40px;
+  font-weight: bold;
+  font-family: Arial;
+  padding-top: 20px;
+}
+
+/* Other header styles */
+h2, h3 {
+  color: #268bd2; /* Blue */
+}
+
+/* Text styles */
+p, li {
+  font-size: 24px;
+  font-family: "Times New Roman";
+  color: #839496; /* Base0 */
+}
+
+/* Horizontal rule */
+hr {
+  border: none;
+  height: 2px;
+  background-color: #268bd2; /* Blue */
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+/* Plotly Figure Size */
+.js-plotly-plot {
+  width: 90% !important;
+  height: 90% !important;
+  margin: 0 auto;
+}
