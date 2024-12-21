@@ -62,8 +62,10 @@ ui <- dashboardPage(
               )
       ),
       # Documentation Tab
+      # In ui.R
       tabItem(tabName = "documentation",
-              includeMarkdown("documentation.Rmd") # Assuming you have a file named documentation.Rmd
+              includeHTML("www/Documentation.html")
+      
       )
     )
   )

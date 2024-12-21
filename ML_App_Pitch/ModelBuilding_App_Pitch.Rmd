@@ -1,0 +1,78 @@
+---
+title: "Interactive ML Model Building App"
+author: "TESLIM MOHAMMED"
+date: "December 21, 2024"
+output: 
+  ioslides_presentation:
+    widescreen: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## Slide 1: Introducing the App
+
+**Unlocking Insights with Interactive Modeling**
+
+<br>
+
+A powerful Shiny app for building, evaluating, and understanding linear regression and decision tree models.
+
+[Link to App](https://ml73o6-mohammed-teslim.shinyapps.io/machinelearning_app/) | [Link to GitHub Repository](https://github.com/Tescoh/Developing-Data-Product.git) - procced to the folder named MachineLearning App
+
+
+## Slide 2: Problem & Solution
+
+**The Challenge:**
+
+*   Understanding and applying statistical models can be complex.
+*   Traditional tools often lack interactivity and visual aids.
+
+**Our Solution:**
+
+*   An intuitive Shiny app that simplifies model building.
+*   Interactive controls for dataset and variable selection.
+*   Visualizations to aid in model interpretation and evaluation.
+
+## Slide 3: App Features - Interactive Controls
+
+``` {r, echo=FALSE, out.width="15%", fig.align='center'}
+knitr::include_graphics("screenshot_input_controls.png")
+```
+**Explore Data & Build Models:**
+
+*   Select from multiple datasets (`mtcars`, `iris`, `Boston`).
+*   Choose dependent & independent variables.
+*   Select model type (Linear Regression or Decision Tree).
+*   Adjust train/test split.
+*   Train models with 10-fold cross-validation.
+
+## Slide 4: App Features - Results & Diagnostics
+
+``` {r, echo=FALSE, out.width="15%", fig.align='center'}
+knitr::include_graphics("screenshot_output_results.png")
+```
+
+**Understand & Evaluate:**
+
+*   Detailed model summaries.
+*   Key evaluation metrics (R-squared, RMSE, MAE, Accuracy, Precision, Recall, F1).
+*   Diagnostic plots for model assessment:
+    *   Linear Regression: Residual plots, Q-Q plots.
+    *   Decision Tree: Tree visualization, variable importance.
+
+## Slide 5: Live Demo & Call to Action
+
+**Experience the App:**
+
+[Link to App](https://ml73o6-mohammed-teslim.shinyapps.io/machinelearning_app)
+
+**Explore the Code:**
+
+[Link to GitHub Repository](https://github.com/Tescoh/Developing-Data-Product.git)
+
+**Get Involved:**
+
+*   Try the app and provide feedback!
+*   Contribute to the project on GitHub.
