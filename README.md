@@ -9,7 +9,6 @@ This repository contains three interactive data science projects developed using
 - [Machine Learning Model Building App](#machine-learning-model-building-app)
 - [Technologies Overview](#technologies-overview)
 - [Getting Started](#getting-started)
-- [Hosted Demos](#hosted-demos)
 - [Author](#author)
 
 ---
@@ -28,7 +27,7 @@ A Leaflet-based interactive map centered on NYU's Center for Data Science.
 - Leaflet.js
 - HTML/CSS
 
-**Live Demo:** [GitHub Pages Link](https://tescoh.github.io/Developing-Data-Product/MyLeafletMap.html)
+**Live Demo:** [GitHub Pages Link](https://tescoh.github.io/My-Data-Products/MyLeafletMap.html)
 
 ---
 
@@ -46,8 +45,7 @@ An animated Plotly visualization exploring Gapminder dataset trends.
 - Plotly
 - Gapminder dataset
 
-**Live Demo:**  
-*Render the `GlobalDev-Trends.html` file locally (see instructions below).*
+**Live Demo:** [GitHub Pages Link](https://tescoh.github.io/My-Data-Products/GlobalDev-Trends.html)
 
 ---
 
@@ -66,8 +64,7 @@ An iOSlides presentation showcasing the Machine Learning Model Building App.
 - HTML/CSS
 - Shiny integration
 
-**Live Demo:**  
-*Render `ModelBuilding_App_Pitch.html` locally (see instructions below).*
+**Live Demo:** [GitHub Pages Link](https://tescoh.github.io/My-Data-Products/ModelBuilding_App_Pitch.html)
 
 ---
 
@@ -86,7 +83,7 @@ A Shiny app for building and evaluating regression/decision tree models.
 - RStudio
 - `caret`, `rpart`, `ggplot2`
 
-**Live Demo:** [ShinyApps.io Link](https://tescoh.shinyapps.io/ML_App/)
+**Live Demo:** [ShinyApps.io Link](https://ml73o6-mohammed-teslim.shinyapps.io/machinelearning_app/)
 
 ---
 
@@ -127,11 +124,6 @@ Open `GlobalDev-Trends.Rmd` → Click Knit.
 
 Open `app.R` → Click Run App.
 
-## Hosted Demos
-
-WebMap: [GitHub Pages](Link to GitHub Pages -  replace with actual link if available)
-
-ML App: [ShinyApps.io](Link to ShinyApps.io - replace with actual link if available)
 
 ## Author
 
