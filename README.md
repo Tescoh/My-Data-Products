@@ -1,6 +1,6 @@
 # Developing Data Products Repository
 
-This repository contains three interactive data science projects developed using R and related technologies. Each project demonstrates different aspects of data visualization, analysis, and model building.
+This repository contains four interactive data science projects developed using R and related technologies. Each project demonstrates different aspects of data visualization, analysis, and model building.
 
 ## Table of Contents
 - [Interactive WebMap](#interactive-webmap)
