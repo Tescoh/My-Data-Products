@@ -5,12 +5,12 @@ This repository contains three interactive data science projects developed using
 ## Table of Contents
 - [Interactive WebMap](#interactive-webmap)
 - [Global Development Trends](#global-development-trends)
+- [ML App iOSlides Presentation](#ml-app-ioslides-presentation)
 - [Machine Learning Model Building App](#machine-learning-model-building-app)
 - [Technologies Overview](#technologies-overview)
 - [Getting Started](#getting-started)
 - [Hosted Demos](#hosted-demos)
 - [Author](#author)
-- [License](#license)
 
 ---
 
